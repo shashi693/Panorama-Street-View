@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.avenueinfotech.panoramastreetview.MainActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/streetviewpanorama"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment" />
+
+    <!-- A set of test checkboxes. -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:padding="6dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/streetnames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onStreetNamesToggled"
+            android:checked="true"
+            android:text="@string/streetnames" />
+
+        <CheckBox
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNavigationToggled"
+            android:checked="true"
+            android:text="@string/navigation" />
+
+        <CheckBox
+            android:id="@+id/zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onZoomToggled"
+            android:checked="true"
+            android:text="@string/zoom_gestures" />
+
+        <CheckBox
+            android:id="@+id/panning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onPanningToggled"
+            android:checked="true"
+            android:text="@string/panning" />
+    </LinearLayout>
+</RelativeLayout>
